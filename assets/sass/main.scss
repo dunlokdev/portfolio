@@ -1,0 +1,348 @@
+@import "./_base.scss";
+
+// header styling
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  height: 100%;
+  width: 35rem;
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  text-align: center;
+  &__image {
+    @include size(17rem);
+    object-fit: cover;
+    border-radius: 50%;
+    border: 0.7rem solid $color-purple;
+  }
+  &__name {
+    font-size: 3.5rem;
+    color: #fff;
+  }
+  &__job {
+    font-size: 2rem;
+    color: $color-purple;
+  }
+  &__navbar {
+    width: 100%;
+    list-style: none;
+    padding: 1rem 3rem;
+  }
+  &__link {
+    display: block;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background-color: #333;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 5rem;
+    transition: $transition;
+    &:hover {
+      background-color: $color-purple;
+    }
+  }
+  &__socials {
+    margin-top: 1rem;
+  }
+  &__social {
+    display: inline-block;
+    margin: 0 1rem;
+    cursor: pointer;
+    color: #fff;
+    transition: $transition;
+    i {
+      font-size: 2rem;
+    }
+    &:hover {
+      color: $color-purple;
+    }
+  }
+}
+#menu {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  color: #fff;
+  cursor: pointer;
+  font-size: 3.5rem;
+  padding: 1rem 1.5rem;
+  z-index: 999;
+  display: none;
+}
+
+// Home styling
+.home {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  padding: 0 15rem;
+  background-image: linear-gradient(to right, rgba(#000, 0.6), rgba(#000, 0.7)),
+    url(../img/user.jpg);
+  background-size: cover;
+  background-position: center;
+  &__text {
+    font-size: 2.5rem;
+    color: #fff;
+  }
+  &__heading {
+    font-size: 5rem;
+    color: #fff;
+    span {
+      //color: $color-purple;
+      color: transparent;
+      background: linear-gradient(to right, #a29bfe, #00cec9);
+      -webkit-background-clip: text;
+    }
+  }
+  &__desc {
+    text-transform: none;
+    font-size: 2rem;
+    color: #eee;
+    padding: 1rem 0;
+    line-height: 1.7;
+  }
+}
+
+// About styling
+.about {
+  &__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+  }
+  &__info {
+    flex: 1 1 48rem;
+    padding: 2rem 1rem;
+    padding-left: 6rem;
+    h3 {
+      font-size: 2rem;
+      color: $color-purple;
+      padding: 1rem 0;
+      font-weight: normal;
+      span {
+        color: #eee;
+        padding: 0 1rem;
+      }
+    }
+  }
+  &__counter {
+    flex: 1 1 48rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  &__box {
+    width: 20rem;
+    border-radius: 2rem;
+    background-color: #222;
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem;
+    span {
+      font-size: 4rem;
+      color: $color-purple;
+    }
+    h3 {
+      font-size: 2rem;
+      color: #fff;
+    }
+  }
+}
+
+// Education styling
+.education {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 0 0 5rem;
+  }
+  &__box {
+    position: relative;
+    width: 27rem;
+    margin: 4rem 1rem;
+    padding-left: 4rem;
+    border-left: 1px solid #fff;
+    i {
+      position: absolute;
+      top: -1.5rem;
+      left: -2.5rem;
+      @include size(5rem);
+      border-radius: 50%;
+      background-color: $color-purple;
+      line-height: 5rem;
+      text-align: center;
+      font-size: 2rem;
+      color: #fff;
+    }
+  }
+  &__time {
+    font-size: 1.4rem;
+    background-color: #222;
+    color: #fff;
+    border-radius: 5rem;
+    padding: 0.5rem 2.5rem;
+  }
+  &__title {
+    font-size: 2rem;
+    color: #fff;
+    padding-top: 1.5rem;
+  }
+  &__desc {
+    font-size: 1.6rem;
+    color: #eee;
+    padding: 1rem 0;
+  }
+}
+
+// Portfolio styling
+.portfolio {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+  }
+  &__box {
+    margin: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    &:hover .portfolio__image {
+      opacity: 0.4;
+    }
+  }
+  &__text {
+    color: #fff;
+    padding: 1rem 3rem;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+  &__image {
+    @include size(30rem, 20rem);
+    border-radius: 1rem;
+    object-fit: cover;
+    object-position: center;
+    transition: $transition;
+  }
+}
+
+// Contact styling
+.contact {
+  &__row {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  &__content {
+    flex: 1 1 30rem;
+    padding: 4rem;
+    padding-bottom: 0;
+  }
+  &__title {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+  }
+  &__info {
+    h3 {
+      display: flex;
+      align-items: center;
+      font-size: 2rem;
+      color: #eee;
+      padding: 1rem 0;
+      font-weight: normal;
+      i {
+        padding-right: 2rem;
+        color: $color-purple;
+      }
+    }
+  }
+  &__form {
+    flex: 1 1 45rem;
+    padding: 2rem;
+    margin: 2rem;
+    margin-bottom: 4rem;
+  }
+  &__input {
+    padding: 1.5rem;
+    margin: 1rem 0;
+    background-color: #3333;
+    color: #fff;
+    font-size: 1.7rem;
+    width: 100%;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    &::placeholder {
+      text-transform: capitalize;
+    }
+    &:focus {
+      border: 2px solid $color-purple;
+    }
+  }
+  &__message {
+    height: 15rem;
+    resize: none;
+  }
+}
+
+// Media queries
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+  .home {
+    padding: 1rem 4rem;
+  }
+}
+@media (max-width: 991px) {
+  .header {
+    left: -120%;
+    transition: $transition;
+    &.toggle {
+      left: 0;
+    }
+  }
+  #menu {
+    display: block;
+  }
+  body {
+    padding: 0;
+  }
+}
+@media (max-width: 415px) {
+  section {
+    padding: 2rem 0;
+  }
+  .header {
+    width: 100vw;
+  }
+  .heading {
+    padding: 0 0.3rem;
+  }
+  .about__box {
+    width: 100%;
+  }
+  .education__box {
+    width: 100%;
+  }
+  .portfolio__box {
+    width: 100%;
+  }
+  .contact__form {
+    margin: 3rem 0;
+  }
+  .portfolio__image {
+    width: 100%;
+  }
+}
